@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj": {}
+    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj": {
+    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj",
+        "projectUniqueName": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj",
         "projectName": "Ecommerce.Api",
-        "projectPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj",
+        "projectPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj",
         "packagesPath": "C:\\Users\\kevyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\obj\\",
+        "outputPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.120\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -142,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.120\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -185,6 +185,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -201,7 +211,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.120\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -264,7 +274,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.120\\RuntimeIdentifierGraph.json"
         }
       }
     }
