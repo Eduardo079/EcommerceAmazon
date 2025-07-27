@@ -13,3 +13,5 @@ C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Applicatio
 C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Application\obj\Debug\net7.0\refint\Ecommerce.Application.dll
 C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Application\obj\Debug\net7.0\Ecommerce.Application.pdb
 C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Application\obj\Debug\net7.0\ref\Ecommerce.Application.dll
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Application\bin\Debug\net7.0\Ecommerce.Application.runtimeconfig.json
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Application\obj\Debug\net7.0\Ecommerce.Application.genruntimeconfig.cache

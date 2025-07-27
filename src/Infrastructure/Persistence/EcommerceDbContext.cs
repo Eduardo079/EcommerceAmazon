@@ -1,5 +1,6 @@
 using System.Net.Sockets;
 using Ecommerce.Domain;
+using Ecommerce.Domain.Common;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,25 @@ public class EcommerceDbContext : IdentityDbContext<Usuario>
 
     }
 
+    public override Task<int> SaveChangeAsync(CancellationToken cancellationToken = default)
+    {
+        var userName = "system";
+        foreach (var entry in ChangeTracker.Entries<BaseDomainModel>())
+        {
+            switch (entry.State)
+            {
+                case EntityState.Added:
+                    entry.Entity.CreatedDate = DateTime.Now;
+                    entry.Entity.CreateBy = userName;
+                    break;
+                case EntityState.Modified:
+                    entry.Entity.LastModifiedDate = DateTime.Now;
+                    entry.Entity.LastModifiedBy = userName;
+                    break;
+            }
+        }
+        return base.SaveChangesAsync(cancellationToken);
+    }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Category>().HasMany(p => p.Products).WithOne(r => r.Category)
