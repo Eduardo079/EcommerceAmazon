@@ -14,9 +14,9 @@ public class EcommerceDbContext : IdentityDbContext<Usuario>
 
     }
 
-    public override Task<int> SaveChangeAsync(CancellationToken cancellationToken = default)
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
-        var userName = "system";
+        var userName = "System";
         foreach (var entry in ChangeTracker.Entries<BaseDomainModel>())
         {
             switch (entry.State)
