@@ -1,5 +1,6 @@
 using System.Text;
 using Ecommerce.Domain;
+using Ecommerce.Infrastructure.Persistence;
 using Ecommerce.Persistence;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,6 +14,9 @@ using Org.BouncyCastle.Asn1.X509.Qualified;
 
 //Connection to DataBase
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddInfrastructureServices(builder.Configuration);
+
 builder.Services.AddDbContext<EcommerceDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectioString"),
     b => b.MigrationsAssembly(typeof(EcommerceDbContext).Assembly.FullName)

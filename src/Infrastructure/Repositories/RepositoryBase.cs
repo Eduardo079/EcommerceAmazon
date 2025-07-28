@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using Ecommerce.Application.Persistence;
+using Ecommerce.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Persistence.Repositories;
