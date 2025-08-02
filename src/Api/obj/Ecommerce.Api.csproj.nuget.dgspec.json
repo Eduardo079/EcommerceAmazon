@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj": {}
+    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj": {
+    "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj",
+        "projectUniqueName": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj",
         "projectName": "Ecommerce.Api",
-        "projectPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\Ecommerce.Api.csproj",
+        "projectPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\Ecommerce.Api.csproj",
         "packagesPath": "C:\\Users\\kevyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\Api\\obj\\",
+        "outputPath": "C:\\Users\\kevyn\\Documents\\Projects\\Ecommerce_Amazon\\src\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,12 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

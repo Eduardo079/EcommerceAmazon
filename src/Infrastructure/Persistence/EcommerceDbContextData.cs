@@ -14,7 +14,7 @@ public class EcommerceDbContextData
     {
         try
         {
-            if (roleManager.Roles.Any())
+            if (!roleManager.Roles.Any())
             {
                 await roleManager.CreateAsync(new IdentityRole(Role.ADMIN));
                 await roleManager.CreateAsync(new IdentityRole(Role.USER));
@@ -22,14 +22,14 @@ public class EcommerceDbContextData
 
             }
 
-            if (userManager.Users.Any())
+            if (!userManager.Users.Any())
             {
                 var usuarioAdmin = new Usuario
                 {
                     Nombre = "Vaxi",
                     Apellido = "Drez",
                     Email = "vaxi.drez.social@gmail.com",
-                    UserName = "vaxi.drez,",
+                    UserName = "vaxi.drez",
                     Telefono = "78992545",
                     AvatarUrl = "https://firebasestorage.googleapis.com/v0/b/edificacion-app.appspot.com/o/vaxidrez.jpg?alt=media&token=14a28860-d149-461e-9c25-9774d7ac1b24",
 
@@ -42,7 +42,7 @@ public class EcommerceDbContextData
                     Nombre = "Damon",
                     Apellido = "Salvatore",
                     Email = "damon.salvatore@gmail.com",
-                    UserName = "vaxi.drez,",
+                    UserName = "damon.salvatore",
                     Telefono = "88552242",
                     AvatarUrl = "https://firebasestorage.googleapis.com/v0/b/edificacion-app.appspot.com/o/avatar-1.webp?alt=media&token=58da3007-ff21-494d-a85c-25ffa758ff6d",
 
@@ -87,7 +87,7 @@ public class EcommerceDbContextData
 
             if (!context.Countries!.Any())
             {
-                var countriesData = File.ReadAllText("../Infrastructure/Data/contries.json");
+                var countriesData = File.ReadAllText("../Infrastructure/Data/countries.json");
                 var countries = JsonConvert.DeserializeObject<List<Country>>(countriesData);
                 await context.Countries!.AddRangeAsync(countries!);
                 await context.SaveChangesAsync();

@@ -8,7 +8,7 @@ public class OrderItem : BaseDomainModel
     public Product? Product { set; get; }
     public int ProductId { get; set; }
 
-    
+    [Column(TypeName = "DECIMAL(10,2)")]
     public decimal Precio { get; set; }
     public int Cantidad { get; set; }
     public Order? Order { get; set; }
