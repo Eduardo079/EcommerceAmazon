@@ -1,0 +1,15 @@
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\bin\Debug\net8.0\Ecommerce.Domain.deps.json
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\bin\Debug\net8.0\Ecommerce.Domain.runtimeconfig.json
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\bin\Debug\net8.0\Ecommerce.Domain.dll
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\bin\Debug\net8.0\Ecommerce.Domain.pdb
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.csproj.AssemblyReference.cache
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.AssemblyInfoInputs.cache
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.AssemblyInfo.cs
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.sourcelink.json
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.dll
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\refint\Ecommerce.Domain.dll
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.pdb
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\Ecommerce.Domain.genruntimeconfig.cache
+C:\Users\kevyn\Documents\Projects\Ecommerce_Amazon\src\Core\Ecommerce.Domain\obj\Debug\net8.0\ref\Ecommerce.Domain.dll

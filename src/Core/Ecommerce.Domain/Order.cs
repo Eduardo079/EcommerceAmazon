@@ -22,8 +22,8 @@ public class Order : BaseDomainModel
 
     public string? CompradorName { get; set; }
     public string? CompradorUserName { get; set; }
-    public OrderAddress OrderAddress { get; set; }
-    public IReadOnlyList<OrderItem> OrderItems { get; set; }
+    public OrderAddress? OrderAddress { get; set; }
+    public IReadOnlyList<OrderItem>? OrderItems { get; set; }
 
     [Column(TypeName = "decimal(10,2)")]
     public decimal SubTotal { get; set; }
