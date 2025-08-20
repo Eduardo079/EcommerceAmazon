@@ -8233,6 +8233,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://sitio2.bitworks.com.sv/BitworksNuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

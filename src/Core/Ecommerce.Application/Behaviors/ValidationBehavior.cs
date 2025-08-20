@@ -3,8 +3,7 @@ using MediatR;
 
 namespace Ecommerce.Application.Behaviors;
 
-public class ValidationBehavior<TRequest, TResponse>
-: IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {
     private readonly IEnumerable<IValidator<TRequest>> _validators;
 
@@ -13,11 +12,7 @@ public class ValidationBehavior<TRequest, TResponse>
         _validators = validators;
     }
     
-    public async Task<TResponse> Handle(
-                        TRequest request, 
-                        RequestHandlerDelegate<TResponse> next, 
-                        CancellationToken cancellationToken
-                        )
+    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         
         if(_validators.Any())
