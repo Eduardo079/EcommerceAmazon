@@ -101,7 +101,7 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : class
         return (await query.FirstOrDefaultAsync());
     }
 
-    public void UodateEntity(T entity)
+    public void UpdateEntity(T entity)
     {
         _context.Set<T>().Attach(entity);
         _context.Entry(entity).State = EntityState.Modified;
@@ -114,4 +114,5 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : class
         await _context.SaveChangesAsync();
         return entity;
     }
+
 }

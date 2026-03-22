@@ -30,7 +30,7 @@ public interface IAsyncRepository<T> where T : class
 
     Task DeleteAsync(T entity);
     void AddEntity(T entity);
-    void UodateEntity(T entity);
+    void UpdateEntity(T entity);
     void DeleteEntity(T entity);
     void AddRange(List<T> entities);
     void DeleteRange(IReadOnlyList<T> entities);
