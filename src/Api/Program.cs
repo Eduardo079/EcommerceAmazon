@@ -2,6 +2,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using Ecommerce.Application;
 using Ecommerce.Application.Contracts.Infrastructure;
+using Ecommerce.Application.Feature.Products.Queries.GetProductList;
 using Ecommerce.Domain;
 using Ecommerce.Infrastructure.ImageCloudinary;
 using Ecommerce.Infrastructure.Persistence;
@@ -29,6 +30,7 @@ builder.Services.AddDbContext<EcommerceDbContext>(options =>
 
 
 builder.Services.AddScoped<IManageImageService, ManageImageService>();
+builder.Services.AddMediatR(typeof(GetProductListQueryHandler).Assembly);
 
 // Add services to the container.
 builder.Services.AddControllers(opt =>

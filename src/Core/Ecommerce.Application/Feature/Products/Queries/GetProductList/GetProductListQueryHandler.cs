@@ -6,7 +6,7 @@ using MimeKit.Encodings;
 
 namespace Ecommerce.Application.Feature.Products.Queries.GetProductList;
 
-public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, List<Product>>
+public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, IReadOnlyList<Product>>
 {
     private readonly IUnitOfWork _iunitOfWork;
 
@@ -15,7 +15,7 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, L
         _iunitOfWork = iunitOfWork;
     }
 
-    public async Task<List<Product>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
+    public async Task<IReadOnlyList<Product>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
     {
         List<Expression<Func<Product, object>>> includes = new List<Expression<Func<Product, object>>>();
         includes.Add(P  => P.Images!);
@@ -28,6 +28,6 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, L
             true
         );
         
-        return new List<Product>(products);
+        return products;
     }
 }
