@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using Ecommerce.Application.Specifications;
 
 namespace Ecommerce.Application.Persistence;
 
@@ -34,5 +35,8 @@ public interface IAsyncRepository<T> where T : class
     void DeleteEntity(T entity);
     void AddRange(List<T> entities);
     void DeleteRange(IReadOnlyList<T> entities);
+    Task<T> GetByIdWithSpec(ISpecification<T> specification);
+    Task<IReadOnlyList<T>> GetAllWithSpec(ISpecification<T> specification);
+    Task<int> CountAsync(ISpecification<T> specification);
 
 }

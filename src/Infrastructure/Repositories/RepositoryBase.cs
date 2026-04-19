@@ -2,7 +2,9 @@ using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using Ecommerce.Application.Persistence;
+using Ecommerce.Application.Specifications;
 using Ecommerce.Infrastructure.Persistence;
+using Ecommerce.Infrastructure.Specification;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Infrastructure.Persistence.Repositories;
@@ -115,4 +117,23 @@ public class RepositoryBase<T> : IAsyncRepository<T> where T : class
         return entity;
     }
 
+    public async Task<T> GetByIdWithSpec(ISpecification<T> specification)
+    {
+        return (await ApplySpecification(specification).FirstOrDefaultAsync())!;
+    }
+
+    public async Task<IReadOnlyList<T>> GetAllWithSpec(ISpecification<T> specification)
+    {
+        return await ApplySpecification(specification).ToListAsync();
+    }
+
+    public async Task<int> CountAsync(ISpecification<T> specification)
+    {
+        return await ApplySpecification(specification).CountAsync();
+    }
+
+    public IQueryable<T> ApplySpecification(ISpecification<T> specification)
+    {
+        return SpecificationEvaluator<T>.GetQuery(_context.Set<T>().AsQueryable(), specification);
+    }
 }

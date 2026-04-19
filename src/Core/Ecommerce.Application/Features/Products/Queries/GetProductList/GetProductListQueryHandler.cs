@@ -1,21 +1,25 @@
 using System.Linq.Expressions;
+using AutoMapper;
+using Ecommerce.Application.Features.Products.Queries.Vms;
 using Ecommerce.Application.Persistence;
 using Ecommerce.Domain;
 using MediatR;
 using MimeKit.Encodings;
 
-namespace Ecommerce.Application.Feature.Products.Queries.GetProductList;
+namespace Ecommerce.Application.Features.Products.Queries.GetProductList;
 
-public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, IReadOnlyList<Product>>
+public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, IReadOnlyList<ProductVm>>
 {
     private readonly IUnitOfWork _iunitOfWork;
+    private readonly IMapper _mapper;
 
-    public GetProductListQueryHandler(IUnitOfWork iunitOfWork)
+    public GetProductListQueryHandler(IUnitOfWork iunitOfWork, IMapper mapper)
     {
         _iunitOfWork = iunitOfWork;
+        _mapper = mapper;
     }
 
-    public async Task<IReadOnlyList<Product>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
+    public async Task<IReadOnlyList<ProductVm>> Handle(GetProductListQuery request, CancellationToken cancellationToken)
     {
         List<Expression<Func<Product, object>>> includes = new List<Expression<Func<Product, object>>>();
         includes.Add(P  => P.Images!);
@@ -27,7 +31,8 @@ public class GetProductListQueryHandler : IRequestHandler<GetProductListQuery, I
             includes,
             true
         );
+        IReadOnlyList<ProductVm> productsVm = _mapper.Map<IReadOnlyList<ProductVm>>(products);
         
-        return products;
+        return productsVm;
     }
 }

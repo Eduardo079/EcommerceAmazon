@@ -1,6 +1,6 @@
 
-using Ecommerce.Application.features.Reviews.Queries.Vms;
 using Ecommerce.Application.Features.Images.Queries.Vms;
+using Ecommerce.Application.Features.Reviews.Queries.Vms;
 using Ecommerce.Application.Models.Product;
 using Ecommerce.Domain;
 namespace Ecommerce.Application.Features.Products.Queries.Vms;
@@ -31,6 +31,8 @@ public class ProductVm
                     {
                         return ProdutStatusLabel.INACTIVO;
                     }
+                default:
+                    return ProdutStatusLabel.INACTIVO;
             } 
         }    
     }

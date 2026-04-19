@@ -2,7 +2,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using Ecommerce.Application;
 using Ecommerce.Application.Contracts.Infrastructure;
-using Ecommerce.Application.Feature.Products.Queries.GetProductList;
+using Ecommerce.Application.Features.Products.Queries.GetProductList;
 using Ecommerce.Domain;
 using Ecommerce.Infrastructure.ImageCloudinary;
 using Ecommerce.Infrastructure.Persistence;
