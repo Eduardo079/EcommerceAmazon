@@ -5,8 +5,10 @@ namespace Ecommerce.Application.Specifications.Products;
 public class ProductSpecification : BaseSpecification<Product>
 {
     public ProductSpecification(ProductSpecificationParams productParams)
-    : base(x => (string.IsNullOrEmpty(productParams.Search)|| x.Nombre!.Contains(productParams.Search) 
-        || x.Descripcion!.Contains(productParams.Search) &&(!productParams.CategoryId.HasValue) || x.CategoryId == productParams.CategoryId)
+    : base(x => 
+    (string.IsNullOrEmpty(productParams.Search)|| x.Nombre!.Contains(productParams.Search) 
+        || x.Descripcion!.Contains(productParams.Search))
+        &&(!productParams.CategoryId.HasValue || x.CategoryId == productParams.CategoryId)
         &&(!productParams.PrecioMin.HasValue || x.Precio >= productParams.PrecioMin)
         &&(!productParams.PrecioMax.HasValue || x.Precio <= productParams.PrecioMax)
         &&(!productParams.Status.HasValue || x.Status == productParams.Status)
@@ -24,19 +26,19 @@ public class ProductSpecification : BaseSpecification<Product>
                     AddOrderBy(p => p.Nombre!);
                     break;
                 case "nombreDes":
-                    AddOrderBy(p => p.Nombre!);
+                    AddOrderByDescending(p => p.Nombre!);
                     break;
                     case "precioAsc":
                     AddOrderBy(p => p.Precio!);
                     break;
                 case "precioDes":
-                    AddOrderBy(p => p.Precio!);
+                    AddOrderByDescending(p => p.Precio!);
                     break;
                 case "RaitingAsc":
                     AddOrderBy(p => p.Rating!);
                     break;
                 case "RaitingDes":
-                    AddOrderBy(p => p.Rating!);
+                    AddOrderByDescending(p => p.Rating!);
                     break;
                 default:
                     AddOrderBy(p => p.CreatedDate!);

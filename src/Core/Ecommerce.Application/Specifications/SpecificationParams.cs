@@ -1,3 +1,5 @@
+using Ecommerce.Application.Specifications.Products;
+
 namespace Ecommerce.Application.Specifications;
 
 // Clase base para parámetros de especificación (filtros/orden/paginación) que otras clases heredarán.
@@ -22,4 +24,9 @@ public abstract class SpecificationParams
 
     // Texto de búsqueda libre para filtrar resultados. Opcional.
     public string? Search { get; set; }
+
+    public static implicit operator SpecificationParams(ProductSpecification v)
+    {
+        throw new NotImplementedException();
+    }
 }
