@@ -16,15 +16,21 @@ public class UnhandledExceptionBehavior<TRequest, TResponse>
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
             try
-            {
-                return await next();
-            }
-            catch(Exception ex)
-            {
-                var requestName = typeof(TRequest).Name;
-                _logger.LogError(ex, "Application Request: Sucedio una exception para el request {Name} {@Request}", requestName, request);
-                throw new Exception("Application Request con Errores");
-            }
+        {
+            return await next();
+        }
+        catch (Exception ex)
+        {
+            var requestName = typeof(TRequest).Name;
+
+            _logger.LogError(
+                ex,
+                "Ocurrió una excepción para el request {Name}. Request: {@Request}",
+                requestName,
+                request);
+
+            throw;
+        }
 
 
 

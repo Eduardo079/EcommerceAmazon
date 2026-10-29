@@ -42,7 +42,7 @@ public class LoginUserCommandHandler : IRequestHandler<LoginUserCommands, AuthRe
             throw new Exception($"El usuario {request.Email} esta bloqueado, contacte al admin");
         }
 
-        SignInResult resultado = await _singInManger.CheckPasswordSignInAsync(user,request.Passwaord!, false);
+        SignInResult resultado = await _singInManger.CheckPasswordSignInAsync(user,request.Password!, false);
 
         if (!resultado.Succeeded)
         {

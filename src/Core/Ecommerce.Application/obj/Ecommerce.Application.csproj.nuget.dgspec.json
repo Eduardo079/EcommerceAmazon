@@ -29,7 +29,7 @@
           "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Repos Bitworks\\Nugets": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://sitio2.bitworks.com.sv:444/BitworksNuget/nuget": {}
+          "https://secundario.bitworks.com.sv:444/BitworksNuget/nuget": {}
         },
         "frameworks": {
           "net8.0": {
@@ -165,7 +165,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.426/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.427/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -194,7 +194,7 @@
           "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Repos Bitworks\\Nugets": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://sitio2.bitworks.com.sv:444/BitworksNuget/nuget": {}
+          "https://secundario.bitworks.com.sv:444/BitworksNuget/nuget": {}
         },
         "frameworks": {
           "net8.0": {
@@ -248,7 +248,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.426/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.427/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

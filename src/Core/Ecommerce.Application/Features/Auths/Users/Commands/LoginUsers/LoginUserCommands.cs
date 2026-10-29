@@ -6,5 +6,5 @@ namespace Ecommerce.Application.Features.Auths.Users.Commands.LoginUser;
 public class LoginUserCommands : IRequest<AuthResponse>
 {
     public string? Email { get; set; }
-    public string? Passwaord { get; set; }
+    public string? Password { get; set; }
 }
